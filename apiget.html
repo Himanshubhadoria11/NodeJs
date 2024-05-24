@@ -1,0 +1,30 @@
+<script>
+
+    function p(a) {
+        return new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                if (a) {
+                    resolve("yes")
+                } else {
+                    reject("no")
+                }
+            },4000)
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(response => response.json())
+                .then(json => console.log(json))
+
+        })
+    }
+
+    //console.log(p(false))
+    p(true).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    })
+
+    console.log("helllo gwalior")
+
+
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+   
+    function p(a)
+    {
+     return new Promise(function(resolve,reject){
+         if(a)
+         {
+             resolve("yes")
+         }else{
+             reject("no")
+         }
+ 
+     })
+    }
+ 
+    // console.log(p(false))
+    p(true).then((result)=>{
+     document.write(result)
+   }).catch((error)=>{
+      console.log(error)
+   })
+ 
+ </script>
